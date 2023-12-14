@@ -41,16 +41,14 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, pos.y, pos.z);
         }
 
-        Vector3 pos2 = transform.position;
-
-        if (pos2.z < -zRange)
+        if (pos.z < -zRange)
         {
-            transform.position = new Vector3(-zRange, pos2.x, pos2.y);
+            transform.position = new Vector3(pos.x, pos.y, -zRange);
         }
 
-        if (pos2.z > zRange)
+        if (pos.z > zRange)
         {
-            transform.position = new Vector3(zRange, pos2.x, pos2.y);
+            transform.position = new Vector3(pos.x, pos.y, zRange);
         }
     }
 
